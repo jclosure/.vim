@@ -1,0 +1,51 @@
+
+require "./House.rb"
+require "./God_like.rb"
+
+
+class Sample
+
+  include God_like
+
+  def initialize id
+    @id = id
+  end
+
+  def id
+    @id
+  end
+
+  def drive
+      
+    test
+  end
+
+  def test
+    self.id
+  end
+
+  def eat thing
+    self.destroy
+  end
+
+end
+
+
+s = Sample.new 1234
+s.create "dimension 1"
+s.create "dimension 2"
+s.create "dimension 3"
+s.create "dimension 4"
+s.create "energy"
+s.create "matter"
+s.create "world"
+
+puts s.render
+
+s.eat "world"
+
+puts s.render
+
+puts s.test
+
+
